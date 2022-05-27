@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+		"types": ["@types/node"],
+		"noEmit": true,
+		"allowJs": true
+	},
+	"extends": "./tsconfig.json",
+	"include": [
+		"pages/**/*",
+		"pages/*",
+		"components/**/*",
+		"components/*",
+		"__tests__",
+		".eslintrc.js",
+		".prettierrc.js",
+		"jest.config.js",
+	],
+	"exclude": [
+		"./dist/**/*"
+	],
+	"parserOptions": {
+		"project": [
+			"./tsconfig.eslint.json",
+			"./tsconfig.json"
+		],
+	},
+  "rules": {
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration",
+      },
+    ]
+  }
+}
